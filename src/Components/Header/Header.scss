@@ -1,0 +1,40 @@
+$primary-color: #1579FB;
+$white: #ffffff;
+
+.container-header{
+  width: 100%;
+  position: fixed;
+  width: 20%;
+  overflow: auto;
+  background-color: $primary-color;
+  height: 100%;
+  float: left;
+  
+  .link-header{
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 28px;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: right;
+    /* background-color: aquamarine; */
+    color: white;
+    line-height: 7vh;
+    transition: 0.2s;
+    box-sizing: content-box;
+    border: 1px solid $primary-color;
+
+    &:hover{
+      border: 1px solid $white;
+      
+    }
+  }
+}
+
+
+
+.container-header:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}

@@ -1,0 +1,105 @@
+$primary-color: #1579FB;
+$white: #ffffff;
+$grey: #919191;
+
+
+.container-signin{
+  background-image: url('../img/bck2.png');
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-form-container{
+  display: flex;
+  flex-direction: row;
+  border-radius: 40px;
+  background-color: $white;
+  min-height: 50vh;
+  min-width: 50vw;
+
+
+  .left-side{
+    box-sizing: border-box;
+    padding-left: 55px;
+    padding-top:70px;
+    display: flex;
+    flex-direction: column;
+
+    min-width: 25vw;
+    background-color: $primary-color;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    color: $white;
+    font-size: 90px;
+    font-weight: 600;
+  }
+
+  .right-side{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 25vw;
+    border-left: 1px solid $primary-color;
+    min-height: 50vh;
+    
+    .form{
+      padding: 10px;
+      margin: 0 auto;
+
+      .signin-input{
+        border: 1px solid $grey;
+        line-height: 0;
+        font-size: 17px;
+        width: 22vw;;
+        display: block;
+        box-sizing: border-box;
+        padding: 10px 15px;
+        border-radius: 60px;
+        color: $primary-color;
+        font-weight: 200;
+        position: relative;
+        margin-bottom: 20px;
+        height: 55px;
+        outline: none;
+      
+        &:focus{
+          border: 1px solid $primary-color;
+        }
+      }
+      
+    }
+  }
+}
+
+.signin-google{
+  color: $grey;
+  margin: 10px;
+}
+
+button{
+    margin-top: 35px;
+    background-color: white;
+    border: 1px solid $primary-color;
+    line-height: 0;
+    font-size: 17px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    border-radius: 60px;
+    color: $primary-color;
+    font-weight: 100;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+
+    &:hover{
+      background-color: $primary-color;
+      color: $white;
+    }
+}
+

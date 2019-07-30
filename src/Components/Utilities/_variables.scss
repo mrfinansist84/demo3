@@ -1,0 +1,59 @@
+$primary-color: #1579FB;
+$second-primary: #6DAAF9;
+$lightblue: #BEDAFE;
+$lightgrey: #c4c4c4;
+$darkgrey: #545454;
+$black: #000000;
+$white: #ffffff;
+$grey: #919191;
+$green: #04ba04;
+$red: #f03030;
+$shadow: rgba(0,0,0,0.5);
+$teal: #6facfc;
+
+.styledButton{
+  margin-top: 5px;
+  background-color: $white;
+  border: 1px solid $primary-color;
+  line-height: 0;
+  font-size: 17px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 15px;
+  border-radius: 60px;
+  color: $primary-color;
+  font-weight: 100;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+
+    &:hover{
+      background-color: $primary-color;
+      color: $white;
+    }
+}
+
+.input-invalid{
+  border: 1px solid $red;
+}
+
+.error-message{
+  color: $red;
+  font-size: 12px;
+}
+
+.input-text{
+  border: 1px solid $grey;
+  line-height: 0;
+  font-size: 17px;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 60px;
+  color: $primary-color;
+  font-weight: 200;
+  position: relative;
+  //margin-bottom: 20px;
+  height: 55px;
+  outline: none;
+}

@@ -1,0 +1,50 @@
+$white: #ffffff;
+$primary-color: #1579FB;
+
+.container-notfound{
+  background-image: url('./notfound2.png');
+  background-size:     cover;                     
+  background-repeat:   no-repeat;
+  background-position: center center;
+  color: $white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .container-notfound-text{
+    padding-left: 3vw;
+    position: fixed;
+    font-weight: 700;
+    float: left;
+      .container-notfound-header{
+        font-size: 50px;
+        font-weight: 700;
+        display: block;
+        color: #000000;
+      }
+
+      .container-notfound-secondheader{
+        display: block;
+        font-size: 76px;
+        font-weight: 700;
+      }
+      .container-takemehome{
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 28px;
+        padding: 10px;
+        color: $white;
+        background-color: $primary-color;
+        cursor: pointer;
+
+        &:hover{
+          color: $primary-color;
+          background-color: $white;
+        }
+      }
+  }
+}

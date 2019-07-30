@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+$primary-color: #1579FB;
+$white: #ffffff;
+
+body {
+    font-family: "Lato", Helvetica, Arial;
+    font-size: 16px;
+}
+
+.container {
+    min-height: 100vh;
+    background-image: url("../img/bck.png");
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.admin-panel {
+    margin-top: 50px;
+    text-align: center;
+    width: 70%;
+    min-height: 40%;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+
+.title {
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-size: 60px;
+    text-align: center;
+    line-height: 1.4;
+    color: $primary-color;
+}
+
+.dropdown {
+    position: relative;
+    margin: 10px;
+    width: 100%;
+}
+
+.dropdown a {
+    text-decoration: none;
+}
+
+.dropdown [data-toggle="dropdown"] {
+    display: block;
+    color: white;
+    background: $primary-color;
+    box-shadow: 0 1px 0 lighten($primary-color, 20%) inset, 0 -1px 0 darken($primary-color, 10%) inset;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+
+.dropdown [data-toggle="dropdown"]:before {
+    position: absolute;
+    display: block;
+    content: '\25BC';
+    font-size: 0.7em;
+    color: #fff;
+    top: 13px;
+    right: 10px;
+    transform: rotate(0deg);
+    transition: transform 0.6s;
+}
+
+.dropdown>.dropdown-menu {
+    width: 80%;
+    max-height: 0;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    transform: scaleY(0);
+    transform-origin: 50% 0%;
+    transition: max-height 0.2s ease-out;
+    animation: hideAnimation 0.2s ease-out;
+}
+
+.dropdown>.dropdown-menu li {
+    padding: 0;
+    margin: 10px 0;
+}
+
+.dropdown>.dropdown-menu li a {
+    display: block;
+    color: #6f6f6f;
+    background: #EEE;
+    box-shadow: 0 1px 0 white inset, 0 -1px 0 #d5d5d5 inset;
+    text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.3);
+    padding: 10px 10px;
+}
+
+.dropdown>.dropdown-menu li a:hover {
+    background-color: darken($primary-color, 20%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.dropdown>input[type="radio"] {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    
+}
+
+.dropdown>input[type="radio"]:checked~.dropdown-menu {
+    max-height: 9999px;
+    display: block;
+    transform: scaleY(1);
+    animation: showAnimation 0.9s ease-in-out;
+    transition: max-height 2s ease-in-out;
+}
+
+.dropdown>input[type="radio"]:checked+a[data-toggle="dropdown"]:before {
+    transform: rotate(-180deg);
+    transition: transform 0.6s;
+}
+
+@keyframes showAnimation {
+    0% {
+
+        transform: scaleY(0.1);
+    }
+
+    40% {
+
+        transform: scaleY(1.1);
+    }
+
+    60% {
+
+        transform: scaleY(0.90);
+    }
+
+    80% {
+
+        transform: scaleY(1.04);
+    }
+
+    100% {
+
+        transform: scaleY(0.9);
+    }
+
+    80% {
+
+        transform: scaleY(1.05);
+    }
+
+    100% {
+
+        transform: scaleY(1);
+    }
+}
+
+@keyframes hideAnimation {
+    0% {
+
+        transform: scaleY(1);
+    }
+
+    60% {
+
+        transform: scaleY(0.98);
+    }
+
+    80% {
+
+        transform: scaleY(1.02);
+    }
+
+    100% {
+
+        transform: scaleY(0);
+    }
+}
+
+.userFields {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid ;
+    border-collapse: collapse;
+    color:$primary-color;
+}
+
+.kickBtn {
+    cursor: pointer;
+    font-size: 20px;
+    padding-right: 20px;
+    line-height: 50px;
+}
+
+.kickBtn:hover {
+    font-size: 22px;
+    font-weight: 700;
+    color: darken($primary-color, 20%);
+}
+
+.cAdminInnerPageFormInput:first-of-type {
+    margin-top: 5px;
+}
+
+.cAdminInnerPageFormInput {
+    margin: 20px 0;
+    border: 1px solid lighten($primary-color, 20%);
+    line-height: 0;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: $primary-color;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    outline: none;
+}
+
+.cAdminInnerPageFormBtn {
+    outline: none;
+    margin: 10px 40%;
+    background-color:$primary-color;
+    border: 1px solid $primary-color;
+    line-height: 0;
+    font-size: 17px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    border-radius: 60px;
+    color: #ffffff;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+}
+
+.cAdminInnerPageForm:disabled {
+    background-color: rgb(224, 222, 222);
+}
+
+.cAdminInnerPageFormLabel {
+    color: $primary-color;
+}
+
+
+@media screen and (max-width: 568px) {
+
+    .cAdminInnerPageForm {
+        width: 90%;
+        max-height: 70%;
+    }
+}

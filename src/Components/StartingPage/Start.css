@@ -1,0 +1,70 @@
+.headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.btn {
+  width: 110px;
+  height: 40px;
+  border-radius: 14px;
+  border-color: #1579FB;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #1579FB;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #1579FB;
+}
+
+.startContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.startContainer > div {
+  width: 50vw;
+}
+
+.contents {
+  color: #ffffff;
+  background-color: #1579FB;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.wheelImage {
+  content: url("./img/img2.png");
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25vh;
+  max-width: 20vw;
+}
+
+@media screen and (max-width: 568px) {
+  .startContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .startContainer > div {
+    width: 100vw;
+    height: 100vh;
+  }
+  .headerContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=Start.css.map */

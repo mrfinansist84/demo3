@@ -1,0 +1,67 @@
+@import '../../Utilities/_variables.scss';
+
+.ProfilePage{
+  display: flex;
+  float: right;
+  position: relative;
+  width: 75vw;
+  margin-top: 30px;
+}
+
+.infoColumn{
+    margin-left: 40px; 
+}
+
+.ProfileField-values{
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+}
+.ProfileField-button{
+  @extend .styledButton;
+  width: 6vw;
+  margin-left: 5px;
+  height: 4vh;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.ProfileField-button-save{
+  border-color: $grey;
+  color: $grey;
+  
+  &:hover{
+    background-color: $lightgrey;
+    color: $white;
+  }
+}
+
+.ProfileField-button-cancel{
+  border-color: $grey;
+  color: $grey;
+
+  &:hover{
+    background-color: $darkgrey;
+    color: $white;
+  }
+}
+
+.ProfileField-input{
+  @extend .input-text;
+  height: 4vh;
+  border-radius: 10px;
+  color: $black;
+  display: inline-block;
+}
+
+.FontAwesomeIcon{
+  cursor: pointer;
+  color: $grey;
+  display: inline-block;
+  margin-left: 8px;
+
+  &:hover{
+    color: $primary-color;
+  }
+}
+

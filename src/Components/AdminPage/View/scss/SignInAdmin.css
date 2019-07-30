@@ -1,0 +1,68 @@
+.cSignInAdmin{
+    background-color: #72b339;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cSignInAdminForm {
+    position: relative;
+    min-height: 40vh;
+    min-width: 30vw;
+    box-sizing: border-box;
+    padding: 30px 25px;
+    background-color: white;
+    border-radius: 40px;
+    margin: 0 auto;
+  }
+  
+  
+  .cSignInAdminEmail, .cSignInAdminPassword {
+    border: 1px solid #72b339;
+    line-height: 0;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: #72b339;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    outline: none;
+  }
+  
+  .cSignInAdminBtn {
+      margin-top: 35px;
+      background-color: white;
+      border: 1px solid #72b339;
+      line-height: 0;
+      font-size: 17px;
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 20px 15px;
+      border-radius: 60px;
+      color: #72b339;
+      font-weight: 100;
+      letter-spacing: 0.01em;
+      outline: none;
+      cursor: pointer;
+  }
+  .cSignInAdminForm:disabled{
+    background-color: rgb(224, 222, 222);
+  }
+  .cSignInAdminLabel{
+    color: #72b339;
+  }
+  
+  
+  @media screen and (max-width: 568px) {
+  
+    .cSignInAdminForm{
+      width: 90%;
+      max-height: 70%; 
+    }
+  }

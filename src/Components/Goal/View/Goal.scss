@@ -1,0 +1,178 @@
+@import '../../Utilities/variables';
+
+.WeeklyGoal-container{
+  display: flex;
+  float: right;
+  position: relative;
+  width: 80vw;
+  flex-grow: 1;
+  flex-basis: 0;
+  .WeeklyGoal-day{
+    flex-grow: 1;
+    flex-basis: 0;
+
+    .WeeklyGoal-day-name{
+      display: block;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 400;
+      background-color: $white;
+      color: $second-primary;
+    }
+  
+    .WeeklyGoal-day-tasks{
+      display: flex;
+      flex-direction: column;
+      background-color: $lightblue;
+      border-radius: 10px;
+      height: 100%;
+      margin: 1px;
+
+      &:hover{
+        background-color: $second-primary;
+      }
+
+      &:hover .addTaskButton{
+        display: inline-block;
+      }
+    }
+  }
+
+  .add-taskButton-container{
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    
+  }
+
+  .addTaskButton{
+    @extend .styledButton;
+    display: none;
+    margin: 3px;
+  }
+}
+
+.modal-Add-Task{
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh; 
+  overflow: auto; 
+  background-color: $black; 
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: $white;
+  margin: 15vh auto; 
+  padding: 20px;
+  border: 1px solid $grey;
+  width: 30vw; 
+}
+
+.close {
+  color: $grey;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-Add-Task-Input{
+  width: 22vw;;
+  @extend .input-text;
+  text-align: center;
+}
+
+.modal-Add-Task-Form{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-submit-button{
+  @extend .styledButton;
+  margin-top: 30px;
+
+  &:hover{
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+.task-minutes{
+  @extend .input-text;
+  width: 22vw;
+  text-align: center;
+}
+
+.Task{
+  background-color: $white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+
+  &:hover{
+    box-shadow: $shadow 0px 0 10px;
+  }
+
+  &-header{
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+  }
+
+  &-type{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 15px;
+    color: $primary-color;
+  }
+
+  &-icon{
+    margin-top: 10px;
+    color: $primary-color;
+    display: inline-block;
+  }
+
+  &-done{
+    background-color: $lightgrey;
+  }
+
+  &-details{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+    padding-top: 5px;
+
+    &:hover{
+      color: $primary-color;
+    }
+  }
+}
+
+.ModalViewTask-info{
+  font-size: 20px;
+}
+
+.ModalViewTask-button{
+  @extend .styledButton;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.completed {
+  background-color: #808080;
+  text-decoration: line-through;
+}
